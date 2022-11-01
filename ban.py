@@ -59,11 +59,11 @@ for x in Var.SUDO:
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        text = "Pong!"
+        text = "𝗖𝗛𝗢𝗗𝗡𝗘 𝗞 𝗟𝗜𝗬𝗘 𝗥𝗘𝗔𝗗𝗬 𝗗𝗘𝗩𝗜𝗟 𝗕𝗛𝗔𝗜"
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
+        await event.edit(f"**I'm On** \n\n 𝗖𝗛𝗢𝗗𝗡𝗘 𝗞 𝗟𝗜𝗬𝗘 𝗥𝗘𝗔𝗗𝗬 𝗗𝗘𝗩𝗜𝗟 𝗕𝗛𝗔𝗜 `{ms}` ms")
 
 
 @Riz.on(events.NewMessage(pattern="^/kickall"))
@@ -98,11 +98,11 @@ async def kickall(event):
          await RiZoeL.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
     
 
-@Riz.on(events.NewMessage(pattern="^/banall"))
+@Riz.on(events.NewMessage(pattern="^/kumar"))
 async def banall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
-         Reply = f"Noob !! Use This Cmd in Group."
+         Reply = "𝗖𝗛𝗢𝗗𝗡𝗔 𝗖𝗛𝗔𝗟𝗨 𝗞𝗨𝗠𝗔𝗥 𝗕𝗛𝗔𝗜"
          await event.reply(Reply)
      else:
          await event.delete()
@@ -112,7 +112,7 @@ async def banall(event):
          creator = RiZ.creator
          if not admin and not creator:
               return await event.reply("I Don't have sufficient Rights !!")
-         RiZoeL = await Riz.send_message(event.chat_id, "**Hello !! I'm Alive**")
+         RiZoeL = await Riz.send_message(event.chat_id, "𝗖𝗛𝗢𝗗𝗡𝗔 𝗖𝗛𝗔𝗟𝗨 𝗞𝗨𝗠𝗔𝗥 𝗕𝗛𝗔𝗜")
          admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
          admins_id = [i.id for i in admins]
          all = 0
@@ -160,7 +160,7 @@ async def _(e):
         if len(e.text) > 7:
             bc = rizoel[0]
             bc = int(bc)
-            text = "Leaving....."
+            text = "𝗞𝗨𝗠𝗔𝗥 𝗔𝗬𝗔 𝗢𝗥 𝗠𝗔𝗔 𝗖𝗛𝗢𝗗 𝗞 𝗖𝗛𝗟𝗔 𝗚𝗬𝗔"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
@@ -169,7 +169,7 @@ async def _(e):
                 await event.edit(str(e))   
         else:
             bc = e.chat_id
-            text = "Leaving....."
+            text = "𝗞𝗨𝗠𝗔𝗥 𝗔𝗬𝗔 𝗢𝗥 𝗠𝗔𝗔 𝗖𝗛𝗢𝗗 𝗞 𝗖𝗛𝗟𝗔 𝗚𝗬𝗔"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
