@@ -59,11 +59,11 @@ for x in Var.SUDO:
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        text = "𝗖𝗛𝗢𝗗𝗡𝗘 𝗞 𝗟𝗜𝗬𝗘 𝗥𝗘𝗔𝗗𝗬 𝗗𝗘𝗩𝗜𝗟 𝗕𝗛𝗔𝗜"
+        text = "𝗝𝗜𝗡𝗗𝗔 𝗛𝗨 𝗖𝗛𝗢𝗗𝗡𝗘 𝗞 𝗟𝗜𝗬𝗘 𝗥𝗘𝗔𝗗𝗬 𝗛𝗨 🥵"
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**I'm On** \n\n 𝗖𝗛𝗢𝗗𝗡𝗘 𝗞 𝗟𝗜𝗬𝗘 𝗥𝗘𝗔𝗗𝗬 𝗗𝗘𝗩𝗜𝗟 𝗕𝗛𝗔𝗜 `{ms}` ms")
+        await event.edit(f"**I'm On** \n\n 𝗝𝗜𝗡𝗗𝗔 𝗛𝗨 𝗖𝗛𝗢𝗗𝗡𝗘 𝗞 𝗟𝗜𝗬𝗘 𝗥𝗘𝗔𝗗𝗬 𝗛𝗨 🥵 `{ms}` ms")
 
 
 @Riz.on(events.NewMessage(pattern="^/kickall"))
@@ -102,7 +102,7 @@ async def kickall(event):
 async def banall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
-         Reply = "𝗖𝗛𝗢𝗗𝗡𝗔 𝗖𝗛𝗔𝗟𝗨 𝗞𝗨𝗠𝗔𝗥 𝗕𝗛𝗔𝗜"
+         Reply = "𝗖𝗛𝗢𝗗𝗡𝗔 𝗖𝗛𝗔𝗟𝗨 𝗞𝗨𝗠𝗔𝗥 𝗕𝗛𝗔𝗜 🥲🤩"
          await event.reply(Reply)
      else:
          await event.delete()
